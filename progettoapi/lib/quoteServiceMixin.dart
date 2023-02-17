@@ -20,9 +20,8 @@ mixin DoSomethingMixin {
           }
         }
       }
-
       Random random = new Random();
-      return(data['docs'][random.nextInt(10)][key]);
+      return(data['docs'][random.nextInt(data['docs'].length)][key]);
     } catch(e) {
       return "There is nothing for you here.\nError: $e.\nYou probably made a typo, check if the name you wrote was correct.";
     }
